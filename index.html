@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body>
+
+    <form id="form1" name="form1" method="POST" action="https://api.samopay.com/API/SamopayCheckCompany.asp">
+        <input type="hidden" name="version" value='2.3.7'/>
+		<input type="hidden" name="v_currency" value='TWD'/>
+		<input type="hidden" name="v_amount" value='500.00'/>
+		<input type="hidden" name="v_firstname" value='John'/>
+		<input type="hidden" name="v_lastname" value='Doe'/>
+		<input type="hidden" name="v_billemail" value='leo.seetoo@hwtech.hk'/>
+		<input type="hidden" name="v_billstreet" value='No. 1 Stuart Road'/>
+		<input type="hidden" name="v_billcity" value='Taipei'/>
+		<input type="hidden" name="v_billcountry" value='TW'/>
+		<input type="hidden" name="v_billphone" value='60388887777'/>
+		<input type="hidden" name="CID" value='M104-C-906'/>
+		<input type="hidden" name="signature" value='8f91c9ec99bf8630724ba377b6906742'/>
+		<input type="hidden" name="v_CartID" value='8888samopay0210'/>
+		<input type="hidden" name="callBackURL" value='https://samopay.requestcatcher.com/test'/>
+		<input type="hidden" name="returnURL" value='http://mitrade.com/'/>
+</form>
+
+</body>
+
+<script type="text/javascript">
+
+    function formAutoSubmit () {
+        var frm = document.getElementById("form1");
+        frm.submit();
+    }
+
+    window.onload = formAutoSubmit;
+    
+</script>
+
+</html>
